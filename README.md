@@ -67,11 +67,12 @@ already respects, and correlate with the trace.
 pi install git:github.com/elecnix/pi-debug-mode@main
 ```
 
-The extension auto-loads on your next pi session. To install manually:
+The extension auto-loads on your next pi session. To install manually (e.g. to hack on it):
 
 ```bash
-# Global (all projects)
-cp src/index.ts ~/.pi/agent/extensions/pi-debug-mode.ts
+# Global (all projects) — the package is multi-file, so copy the whole src/
+mkdir -p ~/.pi/agent/extensions/pi-debug-mode
+cp -r src ~/.pi/agent/extensions/pi-debug-mode/src
 ```
 
 ## Usage
